@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from 'next/navigation';
 
 export default function Text() {
+  const router = useRouter();
   return (
     <section className="relative w-full bg-[#E9ECEF] overflow-hidden">
       <Image
@@ -41,7 +42,7 @@ export default function Text() {
             Running a coaching center? Reach more learners on Brain Boosters.
           </p>
 
-          <button className="border-2 border-white text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#3B9AE1] transition">
+          <button onClick={() => router.push('/bookdemo')} className="border-2 border-white text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#3B9AE1] transition">
             Book a demo!
           </button>
         </div>
